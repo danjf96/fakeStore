@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly basic 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="buttonLeft"
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/images/logo_icon.png",
+        }
+      }
+      style={
+        Object {
+          "height": 21.5,
+          "resizeMode": "contain",
+          "width": 18.33,
+        }
+      }
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#85868A",
+        "fontFamily": "WorkSans-Regular",
+        "fontSize": 14,
+        "fontWeight": "700",
+      }
+    }
+  >
+    TITLE
+  </Text>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="buttonRight"
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../src/assets/images/logo_icon.png",
+        }
+      }
+      style={
+        Object {
+          "height": 21.5,
+          "resizeMode": "contain",
+          "width": 18.33,
+        }
+      }
+    />
+  </View>
+</View>
+`;
