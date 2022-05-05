@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly basic 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ECE9FF",
+        "borderRadius": 12,
+        "flexDirection": "row",
+        "height": 72,
+        "justifyContent": "space-between",
+        "padding": 9,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": "65%",
+      }
+    }
+  >
+    <Image
+      collapsable={false}
+      forwardedRef={[Function]}
+      resizeMode="stretch"
+      source={
+        Object {
+          "uri": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 10,
+          "height": 50,
+          "marginRight": 11,
+          "width": 38,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "black",
+            "flexShrink": 1,
+            "fontFamily": "WorkSans-Regular",
+            "fontSize": 14,
+            "fontWeight": "700",
+          }
+        }
+      >
+        Title
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#8775FE",
+            "fontFamily": "WorkSans-Regular",
+            "fontSize": 16,
+            "fontWeight": "700",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": 14,
+            }
+          }
+        >
+          1x
+        </Text>
+         R$ 
+        100,00
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": "35%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderBottomLeftRadius": 20,
+          "borderColor": "#CCCCCC",
+          "borderRadius": 0,
+          "borderTopLeftRadius": 20,
+          "borderWidth": 1,
+          "flexDirection": "column",
+          "height": 36,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 55,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 14,
+              "fontWeight": "700",
+            },
+            Object {
+              "color": "#CCCCCC",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 25,
+            },
+          ]
+        }
+      >
+        -
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderBottomRightRadius": 20,
+          "borderColor": "#CCCCCC",
+          "borderRadius": 0,
+          "borderTopRightRadius": 20,
+          "borderWidth": 1,
+          "flexDirection": "column",
+          "height": 36,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 55,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 14,
+              "fontWeight": "700",
+            },
+            Object {
+              "color": "#CCCCCC",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 25,
+            },
+          ]
+        }
+      >
+        +
+      </Text>
+    </View>
+  </View>
+</View>
+`;
