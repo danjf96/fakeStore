@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly basic 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "width": 300,
+      },
+      undefined,
+    ]
+  }
+>
+  <View>
+    <Image
+      collapsable={false}
+      forwardedRef={[Function]}
+      resizeMode="stretch"
+      source={
+        Object {
+          "uri": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        }
+      }
+      style={
+        Object {
+          "height": 183,
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#8775FE",
+        "fontFamily": "WorkSans-Regular",
+        "fontSize": 12,
+        "fontWeight": "700",
+        "marginVertical": 2,
+      }
+    }
+  >
+    category
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontFamily": "WorkSans-Regular",
+        "fontSize": 14,
+        "fontWeight": "700",
+      }
+    }
+  >
+    Title
+  </Text>
+  <Text
+    numberOfLines={2}
+    style={
+      Object {
+        "color": "#85868A",
+        "flexShrink": 1,
+        "fontFamily": "WorkSans-Regular",
+        "fontSize": 12,
+        "fontWeight": "500",
+        "marginBottom": 10,
+        "textAlign": "justify",
+        "width": "100%",
+      }
+    }
+  >
+    description
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#8775FE",
+          "fontFamily": "WorkSans-Regular",
+          "fontSize": 22,
+          "fontWeight": "700",
+        }
+      }
+    >
+      R$ 
+      100,00
+    </Text>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderColor": "#8775FE",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "flexDirection": "column",
+          "height": 35,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 35,
+        }
+      }
+      testID="buttonBig"
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 14,
+              "fontWeight": "700",
+            },
+            Object {
+              "color": "#8775FE",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 20,
+            },
+          ]
+        }
+      >
+        +
+      </Text>
+    </View>
+  </View>
+</View>
+`;
