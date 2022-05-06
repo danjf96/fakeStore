@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { ActivityIndicator, FlatList, RefreshControl, Text, useColorScheme, View } from 'react-native'
+import { ActivityIndicator, FlatList, Text, useColorScheme, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import Colors from '../../assets/Colors'
 import { GlobalsStyles } from '../../assets/Globals'
@@ -12,6 +12,7 @@ import { changeCategoriesCard, getCategories } from '../../store/ducks/categorie
 import { getProducts } from '../../store/ducks/products'
 import { changeCartProduct } from '../../store/ducks/shoppingCart'
 import Styles from './styles'
+
 const logo_icon = require('../../assets/images/logo_icon.png')
 
 const Home = (props: any) => {
@@ -19,15 +20,11 @@ const Home = (props: any) => {
     const dispatch = useAppDispatch()
     const theme = useColorScheme()
     const { categoriesProduct, products, shoppingCart } = useAppSelector( state => state )
-    const [refreshing, setRefreshing] = React.useState(false);
-    const onRefresh = () => refreshing && getList()
 
     const getList = (cateogry?: string) => dispatch(getProducts(cateogry))
     const changeCategory = (value:string) => dispatch(changeCategoriesCard('category',value))
 
-    const next = () => {
-        props.navigation.navigate('ShoppingCart')
-    }
+    const next = () => props.navigation.navigate('ShoppingCart')
 
     const pressProduct = (product:any) =>  dispatch(changeCartProduct('add', shoppingCart.list, product))
 
@@ -36,13 +33,7 @@ const Home = (props: any) => {
         getList()
     }, [])
 
-    useEffect( () => {
-        getList(categoriesProduct.category)
-    }, [categoriesProduct.category])
-
-    useEffect( () => {
-        refreshing && setRefreshing(false)
-    }, [refreshing])
+    useEffect( () => getList(categoriesProduct.category) , [categoriesProduct.category])
 
     return (
         <Container style={{ height: '100%' }}>
@@ -50,11 +41,16 @@ const Home = (props: any) => {
                 buttonLeft={'Produtos'}
                 buttonRight={logo_icon}
                 styleTextLeft={{ color: 'black', fontSize: 18, marginBottom: 20 }}
+                onPressRight={() => props.navigation.navigate('ShoppingCart')}
             />
+            
             {products.loading && <ActivityIndicator size={'large'} testID='loading' color={Colors.principal}/>}
             
             {!products.loading &&  
-                <ScrollView style={{ height: '95%'}} scrollEnabled={true} showsVerticalScrollIndicator={false}>
+                <ScrollView 
+                    style={{ height: '95%'}} 
+                    scrollEnabled={true} showsVerticalScrollIndicator={false}
+                >
                     <Text style={Styles().titleCategory}>FILTRAR CATEGORIA</Text>
 
                     <FlatList 
@@ -106,12 +102,13 @@ const Home = (props: any) => {
                                     key={`product_${item.id}` }
                                     styleContainer={{ marginBottom: 15 }}
                                     testID={'product'}
-
+                                    onPressButton={pressProduct}
                                 />
                             )
                         })}
                     </View>
                 </ScrollView>}
+                
             <View style={{ width: '100%', paddingHorizontal: 29, paddingVertical: 10 }}>
                 <CustomButton 
                     text='IR PARA CARRINHO'

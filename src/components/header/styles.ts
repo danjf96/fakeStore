@@ -15,13 +15,33 @@ const Styles = (custom?: any,theme?: ColorSchemeName) => StyleSheet.create({
         fontFamily,
         fontSize: 14,
         fontWeight: '700',
-        color: theme === 'dark' ? 'white' : Colors.header
+        color: theme === 'dark' ? 'white' : Colors.header,
+        textTransform: 'uppercase',
+        ...custom
     },
 
     icon: {
         width: 18.33,
-        height: 21.5,
-        resizeMode:'contain'
+        height: 18.5,
+        resizeMode:'contain',
+        ...custom
+    },
+    
+    lengthCart: {
+        width: 20, 
+        height: 20, 
+        backgroundColor: 'white', 
+        borderRadius: 10 , 
+        position: 'absolute', 
+        top: 0,
+        right: -5 ,
+        zIndex: 99,
+        textAlign: 'center',
+        fontWeight: '700',
+        fontFamily,
+        color: Colors.principal,
+        borderColor: Colors.principal,
+        borderWidth: 0.5
     }
 })
 

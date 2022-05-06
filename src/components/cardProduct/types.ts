@@ -3,12 +3,12 @@ import { PRODUCTS } from "../../store/ducks/products/types";
 
 export interface PRODUCTCARDPROPS {
     styleContainer?: ViewStyle,
-    data: CardProduct,
-    onPressButton: (type: 'add' | 'rm',data:CardProduct) => void,
+    data: CARDPRODUCCTPROPS,
+    onPressButton: (type: 'add' | 'rm',data:CARDPRODUCCTPROPS) => void,
     theme?: ColorSchemeName
 }
 
-interface CardProduct extends PRODUCTS {
+export interface CARDPRODUCCTPROPS extends PRODUCTS {
     "quantity": number
 }
 

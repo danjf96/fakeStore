@@ -4,7 +4,7 @@ import {  BackHandler, StatusBar, Keyboard, KeyboardAvoidingView, Platform } fro
 import { NavigationContainer } from '@react-navigation/native' //
 
 import RootStack from './RootStack'
-const rotasParaFechaApp = ['']
+const rotasParaFechaApp = ['Home']
 // const rotasRotaDesativaBack = []
 
 const Routes = () => {
@@ -50,7 +50,7 @@ const Routes = () => {
     return (
         <React.Fragment>
             <StatusBar backgroundColor={'black'} />
-            <NavigationContainer ref={nav} 
+            <NavigationContainer  ref={nav} 
                 onStateChange={ state => {
                         // let prevScreen = getActiveRouteName(state)
                         // let currentScreen = getActiveRouteName(state)

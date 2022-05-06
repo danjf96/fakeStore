@@ -5,7 +5,7 @@ import { fontFamily } from "../../assets/Globals";
 const Styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: 72,
+        height: 85,
         borderRadius: 12,
         backgroundColor: Colors.Background2,
         padding: 9,

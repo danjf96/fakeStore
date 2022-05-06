@@ -5,7 +5,7 @@ const { width } = Dimensions.get('screen')
 const Styles = (theme?: ColorSchemeName, type?: string) => StyleSheet.create({
     container: {
         width: type === 'big' ? width * 0.5 : width * 0.4,
-        height: type === 'small' ? 230 : 310,
+        height: type === 'small' ? 230 : 315,
         flexDirection: 'column',
         justifyContent: 'space-between',
         marginRight:  type === 'small'  ? 0 : 16,

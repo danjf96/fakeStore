@@ -27,6 +27,7 @@ const STATE = (state = INITIAL_STATE, action: any):STATECART => {
 export const changeCartProduct = (type: 'add' | 'rm', cart:ProductCart[], product: PRODUCTS):any => {
     return async (dispatch: (arg0:any) => any) => {
         let list = [...cart]
+        let total = 0
         const p = list.find( v => v.id == product.id)
         switch(type){
             case 'add': 
@@ -34,18 +35,21 @@ export const changeCartProduct = (type: 'add' | 'rm', cart:ProductCart[], produc
                     list = list.map( v => v.id == product.id ? { ...v, quantity: v.quantity += 1 } : v)
                 } else 
                     list.push({...product, quantity: 1 })
+
+                total = list.length > 0 ? list.map( n => n.price * n.quantity).reduce( (a,b) => a+b) : 0
+
             break;
             case 'rm':
-                if(p) {
-                    if(p.quantity === 1) 
-                        list = list.filter( v => v.id !== product.id)
-                    else
-                        list = list.map( v => v.id == product.id ? { ...v, quantity: v.quantity -= 1 } : v)
-                }
+                if(p?.quantity == 1) 
+                    list = list.filter( v => v.id !== product.id)
+                else
+                    list = list.map( v => v.id == product.id ? { ...v, quantity: v.quantity -= 1 } : v)
+            
+              
                     
+                total = list.length > 0 ? list.map( n => n.price * n.quantity).reduce( (a,b) => a-b) : 0
             break;
         }
-        const total = list.length > 0 ? list.map( n => n.price * n.quantity).reduce( (a,b) => a+b) : 0
         dispatch({ type: Types.CHANGE, payload:  { list, total }})
     }
 }

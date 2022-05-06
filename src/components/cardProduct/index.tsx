@@ -18,7 +18,7 @@ const CardProduct = ({
                 <Image source={{ uri: data.image }} style={Styles.image} resizeMode='stretch'/>
                 <View style={{ flex:1 }}>
                     <Text style={Styles.name} numberOfLines={2}>{data.title}</Text>
-                    <Text style={Styles.price}><Text style={{ fontSize: 14 }}>1x</Text> R$ {formatMoney(data.price)}</Text>
+                    <Text style={Styles.price}><Text style={{ fontSize: 14 }}>{data.quantity}x</Text> R$ {formatMoney(data.price)}</Text>
                 </View>
             </View>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
+import { useAppSelector } from '../../store'
 import Styles from './styles'
 import { PROPSHEADER } from './types'
 
@@ -12,6 +13,7 @@ const Header = ({
     onPressRight,
     styleTextLeft
 }: PROPSHEADER) => {
+    const { list } = useAppSelector( state => state.shoppingCart)
     return (
         <View style={Styles(null,theme).container}>
             <TouchableOpacity onPress={onPressLeft} testID='buttonLeft' disabled={typeof(buttonLeft) === 'string'}>
@@ -22,7 +24,10 @@ const Header = ({
             <Text style={Styles(null,theme).text}>{title}</Text>
 
             <TouchableOpacity onPress={onPressRight} testID='buttonRight'>
-                {buttonRight && <Image source={buttonRight} style={Styles(null,theme).icon} testID='imageRight'/>}
+                {buttonRight && <Image source={buttonRight} style={Styles({width: 30, height: 30},theme).icon} testID='imageRight'/>}
+                {buttonRight && list.length > 0 && <Text style={Styles().lengthCart}>
+                    {list.map( v => v.quantity).reduce( (a,b) => a+b)}
+                </Text>}
             </TouchableOpacity>
         </View>
     )

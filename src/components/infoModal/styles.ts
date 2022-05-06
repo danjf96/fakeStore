@@ -9,6 +9,15 @@ const Styles = StyleSheet.create({
         width: '100%', 
         height: '100%'
     },
+    
+    backgroundOpacity: { 
+        position: 'absolute', 
+        zIndex: 0, 
+        backgroundColor: '#696969',
+        opacity: 0.3, 
+        width: '100%', 
+        height: '100%'
+    },
 
     modal: {
         width: '80%',
@@ -16,7 +25,8 @@ const Styles = StyleSheet.create({
         backgroundColor: 'white',
         paddingVertical: 20,
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        opacity: 1
     },
 
     title: {

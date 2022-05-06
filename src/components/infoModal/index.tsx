@@ -18,7 +18,7 @@ const InfoModal = ({
     return(
         <Modal visible={visible} style={{ flex: 1 }} transparent>
             <View style={Styles.container}>
-
+                <View style={Styles.backgroundOpacity}></View>
                 <View style={Styles.modal}>
                     <Text style={Styles.title}>{title}</Text>
 
