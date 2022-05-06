@@ -1,11 +1,11 @@
 
 import React, { useEffect, useRef } from 'react'
 import {  BackHandler, StatusBar, Keyboard, KeyboardAvoidingView, Platform } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native' //
+import { CommonActions, NavigationContainer } from '@react-navigation/native' //
 
 import RootStack from './RootStack'
-const rotasParaFechaApp = ['Home']
-// const rotasRotaDesativaBack = []
+const rotasParaFechaApp = ['Home','Splash']
+const rotasRedirectHome = ['Finish']
 
 const Routes = () => {
     const nav:any = useRef();
@@ -22,9 +22,15 @@ const Routes = () => {
                     BackHandler.exitApp()
                     return false
                 } 
-                // else if (rotasRotaDesativaBack.includes(rotaAtual.name)){
-                //     return true
-                // }
+                else if (rotasRedirectHome.includes(rotaAtual.name)){
+                    nav.current.dispatch(CommonActions.reset({
+                        index: 0,
+                        routes: [
+                            { name: 'Home' }
+                        ],
+                    }))
+                    return true
+                }
             } 
             
             nav.current.goBack()
