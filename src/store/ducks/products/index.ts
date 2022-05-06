@@ -24,7 +24,7 @@ const STATE = (state = INITIAL_STATE, action: any):STATESTORE => {
 }
 
 //Actions Creators
-export const getProducts = (category?:string ) => {
+export const getProducts = (category?:string ):any => {
     return async (dispatch: (arg0:any) => any) => {
         dispatch({ type: Types.LOAD, loading: true })
         try {

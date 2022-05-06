@@ -1,3 +1,6 @@
+import { PRODUCTS } from "../store/ducks/products/types";
+import { ProductCart } from "../store/ducks/shoppingCart/types";
+
 export const formatMoney = (amount:number, decimalCount = 2, decimal = ",", thousands = ".") => {
     try {
 
@@ -15,3 +18,26 @@ export const formatMoney = (amount:number, decimalCount = 2, decimal = ",", thou
         return '0,00'
     }
 };
+
+export const updateCart = (type: 'add' | 'rm', cart:ProductCart[], product: PRODUCTS) => {
+
+    let list = [...cart]
+    const p = list.find( v => v.id == product.id)
+    switch(type){
+        case 'add': 
+            if(p) {
+                list = [...list, { ...p, quantity: p.quantity += 1 }]
+            } else 
+                list.push({...product, quantity: 1 })
+        break;
+        case 'rm':
+            if(p) {
+                list = [...list, { ...p, quantity: p.quantity -= 1 }]
+            } else 
+                list = list.filter( v => v.id !== product.id)
+        break;
+    }
+    const total = list.length > 0 ? list.map( n => n.price * n.quantity).reduce( (a,b) => a+b) : 0
+
+    return { list , total }
+}

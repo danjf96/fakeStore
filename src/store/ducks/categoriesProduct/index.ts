@@ -23,7 +23,7 @@ const STATE = (state = INITIAL_STATE, action: any):STATECATEGORIESPRODUCT => {
 }
 
 //Actions Creators
-export const getCategories = () => {
+export const getCategories = ():any => {
     return async (dispatch: (arg0:any) => any) => {
         dispatch({ type: Types.LOAD, loading: true })
         try {
@@ -40,7 +40,7 @@ export const getCategories = () => {
 
 }
 
-export const changeCategoriesCard = (key:string, value:any) => {
+export const changeCategoriesCard = (key:string, value:any):any => {
     return async (dispatch: (arg0:any) => any) => {
         dispatch({ type: Types.CHANGE, payload: { [key]: value } })
     }

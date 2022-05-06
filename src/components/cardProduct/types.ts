@@ -1,22 +1,14 @@
 import { ColorSchemeName, TextStyle, TouchableOpacityProps, ViewStyle } from "react-native";
+import { PRODUCTS } from "../../store/ducks/products/types";
 
 export interface PRODUCTCARDPROPS {
     styleContainer?: ViewStyle,
-    data: Product,
-    onPressButton: (type: 'add' | 'rm',data:Product) => void,
+    data: CardProduct,
+    onPressButton: (type: 'add' | 'rm',data:CardProduct) => void,
     theme?: ColorSchemeName
 }
 
-interface Product {
-    "id": number,
-    "title": string,
-    "price": number,
-    "description": string,
-    "category":string,
-    "image": string,
-    "rating":{
-        "rate" :number,
-        "count": number
-    },
+interface CardProduct extends PRODUCTS {
     "quantity": number
 }
+

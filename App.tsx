@@ -13,8 +13,10 @@
  import Routes from './src/routes';
  import store from './src/store'
  import 'react-native-gesture-handler';
+  import { LogBox } from 'react-native';
  
  const App = () => {
+  LogBox.ignoreLogs(['Warning: ...']);
    return (
      <Provider store={store}>
        <Routes />

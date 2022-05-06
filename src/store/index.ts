@@ -12,9 +12,9 @@ const reducer = {
     shoppingCart,
     categoriesProduct
 }
-const store = configureStore({
-    reducer
-})
+const combinedReducers =  combineReducers(reducer)
+
+const store = createStore(combinedReducers, {}, applyMiddleware(ReduxThunk));
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

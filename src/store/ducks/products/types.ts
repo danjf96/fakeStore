@@ -1,7 +1,7 @@
 export interface STATESTORE {
     loading: boolean,
-    list: PORDUCTS[],
-    newsList: PORDUCTS[]
+    list: PRODUCTS[],
+    newsList: PRODUCTS[]
 }
 
 //TYPES ACTIONS
@@ -11,7 +11,7 @@ export const Types = {
     LOAD: 'LOAD_PRODUCTS'
 }
 
-export interface PORDUCTS {
+export interface PRODUCTS {
     "id": number,
     "title": string,
     "price": number,
