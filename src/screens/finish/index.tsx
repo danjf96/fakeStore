@@ -21,7 +21,7 @@ const Finish = (props:any) => {
         }))
     }
 
-    useEffect( () => dispatch( cleanCart()) , [])
+    useEffect( () => { dispatch( cleanCart()) } , [])
 
     return (
         <View style={Styles.container}>
