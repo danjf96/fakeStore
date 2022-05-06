@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clean cart renders correctly 1`] = `
+Array [
+  " ",
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#8775FE",
+        "flexDirection": "column",
+        "height": "100%",
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      collapsable={false}
+      forwardedRef={[Function]}
+      resizeMode="contain"
+      source={
+        Object {
+          "testUri": "../../../src/assets/images/success.png",
+        }
+      }
+      style={
+        Object {
+          "height": 150,
+          "marginBottom": 30,
+          "resizeMode": "contain",
+          "tintColor": "white",
+          "width": 150,
+        }
+      }
+    />
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontFamily": "WorkSans-Regular",
+          "fontSize": 25,
+          "fontWeight": "700",
+          "marginBottom": 12,
+        }
+      }
+    >
+      SUCESSO!
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontFamily": "WorkSans-Regular",
+            "fontSize": 25,
+            "fontWeight": "700",
+            "marginBottom": 12,
+          },
+          Object {
+            "fontSize": 16,
+            "fontWeight": "normal",
+          },
+        ]
+      }
+    >
+      Compra realizada com sucesso, aproveite!
+    </Text>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#504DB6",
+          "borderRadius": 37,
+          "bottom": 60,
+          "flexDirection": "column",
+          "height": 50,
+          "justifyContent": "center",
+          "opacity": 1,
+          "position": "absolute",
+          "width": "90%",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 14,
+              "fontWeight": "700",
+            },
+            undefined,
+          ]
+        }
+      >
+        PROSSEGUIR
+      </Text>
+    </View>
+  </View>,
+  " ",
+]
+`;

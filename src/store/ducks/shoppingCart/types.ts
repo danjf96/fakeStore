@@ -9,6 +9,7 @@ export interface STATECART {
 //TYPES ACTIONS
 export const Types = {
     CLEAN: 'CLEAN',
+    CLEAN_CART: 'CLEAN_CART',
     CHANGE: 'CHANGE_SHOPPINGCART',
     LOAD: 'LOAD_SHOPPINGCART'
 }

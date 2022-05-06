@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Splash from '../screens/splash';
 import Home from '../screens/home';
 import ShoppingCart from '../screens/shoppingCart';
+import Finish from '../screens/finish';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,11 @@ const RootStack = () => {
             <Stack.Screen
                 name="ShoppingCart"
                 component={ShoppingCart}
+            /> 
+            
+            <Stack.Screen
+                name="Finish"
+                component={Finish}
             /> 
         </Stack.Navigator>
     )

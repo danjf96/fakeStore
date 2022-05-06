@@ -17,6 +17,7 @@ const STATE = (state = INITIAL_STATE, action: any):STATECART => {
         case Types.CHANGE:
             return { ...state, ...action.payload }
         case Types.CLEAN:
+        case Types.CLEAN_CART:
             return INITIAL_STATE
         default:
             return state;
@@ -24,6 +25,8 @@ const STATE = (state = INITIAL_STATE, action: any):STATECART => {
 }
 
 //Actions Creators
+export const cleanCart = ():any => async (dispatch: (arg0:any) => any) => dispatch({ type: Types.CLEAN_CART })
+
 export const changeCartProduct = (type: 'add' | 'rm', cart:ProductCart[], product: PRODUCTS):any => {
     return async (dispatch: (arg0:any) => any) => {
         let list = [...cart]
