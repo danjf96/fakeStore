@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  " ",
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "padding": 19,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": true,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="buttonLeft"
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#85868A",
+                  "fontFamily": "WorkSans-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                },
+                Object {
+                  "color": "black",
+                  "fontSize": 18,
+                  "marginBottom": 20,
+                },
+              ]
+            }
+          >
+            Produtos
+          </Text>
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#85868A",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 14,
+              "fontWeight": "700",
+            }
+          }
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="buttonRight"
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/logo_icon.png",
+              }
+            }
+            style={
+              Object {
+                "height": 21.5,
+                "resizeMode": "contain",
+                "width": 18.33,
+              }
+            }
+            testID="imageRight"
+          />
+        </View>
+      </View>
+      <ActivityIndicator
+        color="#8775FE"
+        size="large"
+        testID="loading"
+      />
+    </View>
+  </RCTSafeAreaView>,
+  " ",
+]
+`;

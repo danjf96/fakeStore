@@ -98,6 +98,7 @@ const Home = (props: any) => {
                     renderItem={({ item }) => <Product 
                         data={item}
                         theme={theme}
+                        testID={'newsproduct'}
                     />}
                     keyExtractor={ (item, i) => `product_${item.id}` }
                     horizontal={true}
@@ -118,6 +119,8 @@ const Home = (props: any) => {
                                 theme={theme}
                                 key={`product_${item.id}` }
                                 styleContainer={{ marginBottom: 15 }}
+                                testID={'product'}
+
                             />
                         )
                     })}

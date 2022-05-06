@@ -1,6 +1,6 @@
-import { ColorSchemeName, TextStyle, TouchableOpacityProps, ViewStyle } from "react-native";
+import { ColorSchemeName, TextStyle, TouchableOpacityProps, ViewProps, ViewStyle } from "react-native";
 
-export interface PRODUCTPROPS {
+export interface PRODUCTPROPS extends ViewProps {
     styleContainer?: ViewStyle,
     data: Product,
     typeStyle?: 'big' | 'small',
