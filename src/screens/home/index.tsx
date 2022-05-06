@@ -109,12 +109,12 @@ const Home = (props: any) => {
                     </View>
                 </ScrollView>}
                 
-            <View style={{ width: '100%', paddingHorizontal: 29, paddingVertical: 10 }}>
+            {shoppingCart.list.length > 0 && <View style={{ width: '100%', paddingHorizontal: 29, paddingVertical: 10 }}>
                 <CustomButton 
                     text='IR PARA CARRINHO'
                     onPress={next}
                 />
-            </View>
+            </View>}
         </Container>
     )
 }
