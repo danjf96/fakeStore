@@ -60,6 +60,7 @@ const ShoppingCart = (props:any) => {
                                     data={item}
                                     styleContainer={Styles.productContainer}
                                     onPressButton={changeValue}
+                                    testID='cart'
                                 />
                             }
                             keyExtractor={ (item,index) => `cart${index}`}

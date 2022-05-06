@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  " ",
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "white",
+            "padding": 19,
+            "width": "100%",
+          },
+          Object {
+            "height": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            Object {
+              "disabled": false,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="buttonLeft"
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/arrow_left.png",
+              }
+            }
+            style={
+              Object {
+                "height": 18.5,
+                "resizeMode": "contain",
+                "width": 18.33,
+              }
+            }
+            testID="imageLeft"
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#85868A",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 14,
+              "fontWeight": "700",
+              "textTransform": "uppercase",
+            }
+          }
+        >
+          carrinho
+        </Text>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+          testID="buttonRight"
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontFamily": "WorkSans-Regular",
+            "fontSize": 24,
+            "fontWeight": "700",
+            "marginBottom": 25,
+            "marginTop": 30,
+            "width": "100%",
+          }
+        }
+      >
+        Meu carrinho
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "marginTop": "50%",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../src/assets/images/logo.png",
+            }
+          }
+          style={
+            Object {
+              "height": 80,
+              "marginBottom": 12,
+              "opacity": 0.3,
+              "resizeMode": "contain",
+              "tintColor": "#696969",
+              "width": 80,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#9A9999",
+              "fontFamily": "WorkSans-Regular",
+              "fontSize": 14,
+              "fontWeight": "700",
+              "marginBottom": 16,
+              "textAlign": "center",
+              "textTransform": "uppercase",
+              "width": "80%",
+            }
+          }
+        >
+          Nenhum item adicionado no carrinho.
+        </Text>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#8775FE",
+              "borderRadius": 37,
+              "flexDirection": "column",
+              "height": 50,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "white",
+                  "fontFamily": "WorkSans-Regular",
+                  "fontSize": 14,
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            ADICIONAR ITENS
+          </Text>
+        </View>
+      </View>
+      <Modal
+        hardwareAccelerated={false}
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        transparent={true}
+        visible={false}
+      />
+    </View>
+  </RCTSafeAreaView>,
+  " ",
+]
+`;
