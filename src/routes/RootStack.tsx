@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 //ROUTES
 import Splash from '../screens/splash';
+import Home from '../screens/home';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,10 @@ const RootStack = () => {
                 component={Splash}
             />  
 
+            <Stack.Screen
+                name="Home"
+                component={Home}
+            /> 
         </Stack.Navigator>
     )
 }

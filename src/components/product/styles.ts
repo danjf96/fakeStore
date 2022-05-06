@@ -4,12 +4,19 @@ import { fontFamily } from "../../assets/Globals";
 const { width } = Dimensions.get('screen')
 const Styles = (theme?: ColorSchemeName, type?: string) => StyleSheet.create({
     container: {
-        width: type === 'big' ? width * 0.5 : width * 0.4
+        width: type === 'big' ? width * 0.5 : width * 0.4,
+        height: type === 'small' ? 230 : 310,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        marginRight:  type === 'small'  ? 0 : 16,
+        borderRadius: 10,
     },
 
     image: {
         width: '100%',
         height: type === 'big' ? 183 : 139,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
     },
 
     category: {

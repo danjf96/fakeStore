@@ -1,4 +1,4 @@
-import { ColorSchemeName, ImageSourcePropType } from "react-native";
+import { ColorSchemeName, ImageSourcePropType, TextStyle } from "react-native";
 
 export interface PROPSHEADER {
     title?: string,
@@ -7,4 +7,5 @@ export interface PROPSHEADER {
     theme?: ColorSchemeName
     onPressLeft?: () => void,
     onPressRight?: () => void,
+    styleTextLeft?: TextStyle
 }

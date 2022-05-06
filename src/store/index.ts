@@ -2,26 +2,26 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 import products from './ducks/products'
 import shoppingCart from './ducks/shoppingCart'
+import categoriesProduct from './ducks/categoriesProduct'
 import ReduxThunk from 'redux-thunk';
+import { configureStore } from '@reduxjs/toolkit';
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
-const reducers = {
+const reducer = {
     products,
-    shoppingCart
+    shoppingCart,
+    categoriesProduct
 }
+const store = configureStore({
+    reducer
+})
 
-const combinedReducers =  combineReducers(reducers)
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
 
-const store = createStore(combinedReducers, {}, applyMiddleware(ReduxThunk));
-
-// We can use RootState type in every file in project
-declare global {
-    type RootState = ReturnType<typeof store.getState>
-}
-
-// Thanks to that you will have ability to use useSelector hook with state value
-declare module 'react-redux' {
-    interface DefaultRootState extends RootState { }
-}
+// Use throughout your app instead of plain `useDispatch` and `useSelector`
+export const useAppDispatch = () => useDispatch<AppDispatch>()
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 export default store
 

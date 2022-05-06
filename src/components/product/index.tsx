@@ -14,7 +14,7 @@ const Product = ({
     theme = 'light'
 }:PRODUCTPROPS) => {
     return(
-        <View style={[Styles(theme).container, styleContainer]}>
+        <View style={[Styles(theme, typeStyle).container, styleContainer]}>
             <View>
                 <Image source={{ uri: data.image }} style={Styles(theme, typeStyle).image} resizeMode='stretch'/>
                 {typeStyle === 'small' && <CustomButton 
@@ -25,12 +25,12 @@ const Product = ({
                     testID='buttonSmall'
                 />}
             </View>
-
-            <Text style={Styles(theme).category}>{data.category}</Text>
-            <Text style={Styles(theme).name}>{data.title}</Text>
-            
-           {typeStyle === 'big' && <Text style={Styles(theme).description} numberOfLines={2}>{data.description}</Text>}
-
+            <View>
+                <Text style={Styles(theme).category}>{data.category}</Text>
+                <Text style={Styles(theme).name} numberOfLines={2}>{data.title}</Text>
+                
+                {typeStyle === 'big' && <Text style={Styles(theme).description} numberOfLines={2}>{data.description}</Text>}
+            </View>
             <View style={Styles(theme).containerPrice}>
                 <Text style={Styles(theme).price}>R$ {formatMoney(data.price)}</Text>
 

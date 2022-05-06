@@ -9,13 +9,14 @@ const Header = ({
     title, 
     theme,
     onPressLeft,
-    onPressRight
+    onPressRight,
+    styleTextLeft
 }: PROPSHEADER) => {
     return (
         <View style={Styles(null,theme).container}>
-            <TouchableOpacity onPress={onPressLeft} testID='buttonLeft'>
+            <TouchableOpacity onPress={onPressLeft} testID='buttonLeft' disabled={typeof(buttonLeft) === 'string'}>
                 {buttonLeft && typeof(buttonLeft) !== 'string' && <Image source={buttonLeft} style={Styles(null,theme).icon} testID='imageLeft' />}
-                {typeof(buttonLeft) === 'string' &&  <Text style={Styles(null,theme).text}>{buttonLeft}</Text>}
+                {typeof(buttonLeft) === 'string' &&  <Text style={[Styles(null,theme).text, styleTextLeft]}>{buttonLeft}</Text>}
             </TouchableOpacity>
 
             <Text style={Styles(null,theme).text}>{title}</Text>
