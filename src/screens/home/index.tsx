@@ -22,6 +22,7 @@ const Home = (props: any) => {
     const { categoriesProduct, products, shoppingCart } = useAppSelector( state => state )
 
     const getList = (cateogry?: string) => dispatch(getProducts(cateogry))
+    const getListCategories = () => dispatch(getCategories())
     const changeCategory = (value:string) => dispatch(changeCategoriesCard('category',value))
 
     const next = () => props.navigation.navigate('ShoppingCart')
@@ -29,11 +30,10 @@ const Home = (props: any) => {
     const pressProduct = (product:any) =>  dispatch(changeCartProduct('add', shoppingCart.list, product))
 
     useEffect( () => {
-        dispatch(getCategories())
-        getList()
+        getListCategories()
     }, [])
 
-    useEffect( () => getList(categoriesProduct.category) , [categoriesProduct.category])
+    useEffect( () => { getList(categoriesProduct.category) } , [categoriesProduct.category])
 
     return (
         <Container style={{ height: '100%' }}>
