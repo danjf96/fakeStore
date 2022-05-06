@@ -4,6 +4,17 @@ exports[`renders correctly basic 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
 >
-  <View />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "padding": 19,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  />
 </RCTSafeAreaView>
 `;

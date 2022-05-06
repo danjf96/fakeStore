@@ -12,6 +12,11 @@ exports[`renders correctly basic 1`] = `
   }
 >
   <View
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -37,11 +42,12 @@ exports[`renders correctly basic 1`] = `
       }
       style={
         Object {
-          "height": 21.5,
+          "height": 18.5,
           "resizeMode": "contain",
           "width": 18.33,
         }
       }
+      testID="imageLeft"
     />
   </View>
   <Text
@@ -51,6 +57,7 @@ exports[`renders correctly basic 1`] = `
         "fontFamily": "WorkSans-Regular",
         "fontSize": 14,
         "fontWeight": "700",
+        "textTransform": "uppercase",
       }
     }
   >
@@ -82,11 +89,12 @@ exports[`renders correctly basic 1`] = `
       }
       style={
         Object {
-          "height": 21.5,
+          "height": 30,
           "resizeMode": "contain",
-          "width": 18.33,
+          "width": 30,
         }
       }
+      testID="imageRight"
     />
   </View>
 </View>

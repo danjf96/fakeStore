@@ -33,19 +33,18 @@
    });
  
    test('renders correctly card products', async () => {
-     const onPress = jest.fn()
-     const onPressSecond = jest.fn()
- 
-     const { getAllByTestId } = await waitFor(() =>
-         render(component)
-     ); 
- 
-     await waitFor( () => {
-       const { list, newsList } = store.getState().products
-       expect(list).not.toHaveLength(0)
-       expect(newsList).not.toHaveLength(0)
-       //expect(getAllByTestId('product')).not.toHaveLength(0)
-     })
+
+      const screen = await waitFor(() =>
+          render(component)
+      );
+
+      await fakeTime(1500)
+
+      await waitFor( () => {
+        const { list, newsList } = store.getState().products
+        expect(list).not.toHaveLength(0)
+        expect(newsList).not.toHaveLength(0)
+      })
  
    });
    

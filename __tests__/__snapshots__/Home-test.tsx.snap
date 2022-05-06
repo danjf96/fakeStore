@@ -10,10 +10,13 @@ Array [
       style={
         Array [
           Object {
+            "backgroundColor": "white",
             "padding": 19,
             "width": "100%",
           },
-          undefined,
+          Object {
+            "height": "100%",
+          },
         ]
       }
     >
@@ -58,6 +61,7 @@ Array [
                   "fontFamily": "WorkSans-Regular",
                   "fontSize": 14,
                   "fontWeight": "700",
+                  "textTransform": "uppercase",
                 },
                 Object {
                   "color": "black",
@@ -77,13 +81,14 @@ Array [
               "fontFamily": "WorkSans-Regular",
               "fontSize": 14,
               "fontWeight": "700",
+              "textTransform": "uppercase",
             }
           }
         />
         <View
           accessible={true}
           collapsable={false}
-          focusable={false}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -106,9 +111,9 @@ Array [
             }
             style={
               Object {
-                "height": 21.5,
+                "height": 30,
                 "resizeMode": "contain",
-                "width": 18.33,
+                "width": 30,
               }
             }
             testID="imageRight"

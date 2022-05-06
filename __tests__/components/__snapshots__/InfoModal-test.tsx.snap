@@ -25,10 +25,23 @@ exports[`renders correctly basic 1`] = `
     <View
       style={
         Object {
+          "backgroundColor": "#696969",
+          "height": "100%",
+          "opacity": 0.3,
+          "position": "absolute",
+          "width": "100%",
+          "zIndex": 0,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
           "alignItems": "center",
           "backgroundColor": "white",
           "borderRadius": 10,
           "flexDirection": "column",
+          "opacity": 1,
           "paddingVertical": 20,
           "width": "80%",
         }

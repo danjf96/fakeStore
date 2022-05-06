@@ -8,13 +8,15 @@
  
  // Note: test renderer must be required after react-native.
 import { fireEvent, render } from 'react-native-testing-library';
+import { Provider } from 'react-redux';
+import store from '../../src/store';
 const icon = require('../../src/assets/images/logo_icon.png');
 
 describe('renders correctly', () => {
     const onPressLeft = jest.fn()
     const onPressRight = jest.fn()
     
-    const component  = <Header 
+    const component  = <Provider store={store} ><Header 
         buttonLeft={icon}
         title='TITLE'
         buttonRight={icon}
@@ -22,6 +24,7 @@ describe('renders correctly', () => {
         onPressLeft={onPressLeft}
         onPressRight={onPressRight}
     />
+    </Provider>
 
     it('basic', () => {
         const screen = render(component);
@@ -29,11 +32,11 @@ describe('renders correctly', () => {
     });
 
     it('more renders', () => {
-        const { getAllByText, getByTestId } = render(<Header 
+        const { getAllByText, getByTestId } = render(<Provider store={store} ><Header 
             buttonLeft={'LEFT'}
             title='TITLE'
             buttonRight={icon}
-        />);
+        /></Provider>);
 
         expect(getAllByText(/TITLE|LEFT/)).toBeTruthy()
         expect(getByTestId('imageRight')).toBeTruthy()

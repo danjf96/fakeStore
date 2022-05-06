@@ -9,7 +9,7 @@ exports[`renders correctly basic 1`] = `
         "backgroundColor": "#ECE9FF",
         "borderRadius": 12,
         "flexDirection": "row",
-        "height": 72,
+        "height": 85,
         "justifyContent": "space-between",
         "padding": 9,
         "width": "100%",
@@ -84,7 +84,8 @@ exports[`renders correctly basic 1`] = `
             }
           }
         >
-          1x
+          1
+          x
         </Text>
          R$ 
         100,00

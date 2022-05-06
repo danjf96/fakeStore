@@ -5,7 +5,12 @@ exports[`renders correctly basic 1`] = `
   style={
     Array [
       Object {
-        "width": 300,
+        "borderRadius": 10,
+        "flexDirection": "column",
+        "height": 315,
+        "justifyContent": "space-between",
+        "marginRight": 16,
+        "width": 375,
       },
       undefined,
     ]
@@ -23,54 +28,59 @@ exports[`renders correctly basic 1`] = `
       }
       style={
         Object {
+          "borderTopLeftRadius": 10,
+          "borderTopRightRadius": 10,
           "height": 183,
           "width": "100%",
         }
       }
     />
   </View>
-  <Text
-    style={
-      Object {
-        "color": "#8775FE",
-        "fontFamily": "WorkSans-Regular",
-        "fontSize": 12,
-        "fontWeight": "700",
-        "marginVertical": 2,
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "#8775FE",
+          "fontFamily": "WorkSans-Regular",
+          "fontSize": 12,
+          "fontWeight": "700",
+          "marginVertical": 2,
+        }
       }
-    }
-  >
-    category
-  </Text>
-  <Text
-    style={
-      Object {
-        "color": "black",
-        "fontFamily": "WorkSans-Regular",
-        "fontSize": 14,
-        "fontWeight": "700",
+    >
+      category
+    </Text>
+    <Text
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "black",
+          "fontFamily": "WorkSans-Regular",
+          "fontSize": 14,
+          "fontWeight": "700",
+        }
       }
-    }
-  >
-    Title
-  </Text>
-  <Text
-    numberOfLines={2}
-    style={
-      Object {
-        "color": "#85868A",
-        "flexShrink": 1,
-        "fontFamily": "WorkSans-Regular",
-        "fontSize": 12,
-        "fontWeight": "500",
-        "marginBottom": 10,
-        "textAlign": "justify",
-        "width": "100%",
+    >
+      Title
+    </Text>
+    <Text
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#85868A",
+          "flexShrink": 1,
+          "fontFamily": "WorkSans-Regular",
+          "fontSize": 12,
+          "fontWeight": "500",
+          "marginBottom": 10,
+          "textAlign": "justify",
+          "width": "100%",
+        }
       }
-    }
-  >
-    description
-  </Text>
+    >
+      description
+    </Text>
+  </View>
   <View
     style={
       Object {
